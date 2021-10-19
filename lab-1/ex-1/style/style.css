@@ -1,0 +1,214 @@
+p:nth-child(1){
+    background-color: red;
+    font-size: medium;
+    font-style: italic;
+    border: 2px solid firebrick;
+    border-radius: 8px;
+}
+
+p:nth-child(2){
+    background-color: blueviolet;
+    font-size: x-small;
+    font-style: oblique;
+    width: 50%;
+    height: 13px;
+    overflow: hidden;
+    margin: 2rem 0;
+    padding: 2rem;
+}
+
+p:nth-child(3){
+    background-color: yellowgreen;
+    font-size: smaller;
+    font-style:initial;
+    padding: 1rem;
+}
+
+p:nth-child(4){
+    background-color: yellow;
+    font-size: xx-small;
+    margin-top:-2rem;
+}
+
+table {
+    margin: 0 auto;
+}
+
+td, th {
+    width: 9rem;
+    height: 3rem;
+}
+
+
+tr {
+    background-color: rgb(84, 128, 252);
+}
+
+tbody> tr:nth-child(2n+1) {
+    background-color: rgb(184, 189, 235);
+}
+
+tbody> tr:nth-child(2n) {
+    background-color: rgb(213, 212, 230);
+}
+
+
+table:nth-of-type(2) td,  table:nth-of-type(2) th {
+    width: 11rem;
+    height: 3rem;
+    border: 2px solid black;
+    border-collapse: collapse;
+}
+
+table:nth-of-type(2) th {
+    background-color: rgb(95, 95, 95);
+}
+
+table:nth-of-type(2) td {
+    background-color: rgb(204, 204, 204);
+}
+
+table:nth-of-type(2) {
+    border-collapse:collapse;
+}
+
+figure:nth-of-type(1){
+    float: left;
+}
+
+figure:nth-of-type(2){
+    float: right;
+}
+
+section {
+    margin: 5rem auto;
+    width: 70%;
+}
+
+.img-size {
+    width: 15%;
+    height: 15%;
+}
+
+.flex-block {
+    display: flex;
+    justify-content: space-around;
+}
+
+
+.m-0-auto {
+    margin: 0 auto;
+}
+
+.w-70 {
+    width: 70%;
+}
+
+.flex-block img:nth-of-type(1){
+    order: 3;
+}
+
+.flex-block img:nth-of-type(2){
+    order: 2;
+}
+
+.flex-block img:nth-of-type(3){
+    order: 1;
+}
+
+.mt-10 {
+    margin-top: 10rem;
+}
+
+.continent {
+    list-style-type: none;
+    padding: 5rem;
+    font-size: x-large;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.europe {
+    background-image: url('https://upload.wikimedia.org/wikipedia/commons/thumb/b/b7/Flag_of_Europe.svg/2560px-Flag_of_Europe.svg.png');
+}
+
+.asia {
+    background-image: url('https://i.wpimg.pl/1200x/m.gadzetomania.pl/chiny-flaga1-533a51e155e52657ff6,0,0,0,0.gif');
+}
+
+.b-orange {
+    background-color: orange;
+}
+
+form {
+    width: 35%;
+    height: 45vh;
+    background-color: rgb(2, 21, 73);
+    color: rgb(238, 255, 0);
+}
+
+.pr-1 {
+    padding-right: 1rem;
+
+}
+
+.inherit {
+    all: inherit !important;
+}
+
+.form-data > p > span{
+    text-align: right;
+    line-height: 2rem;
+}
+
+.form-data > p {
+    width: 80% !important;
+}
+
+form > h3.b-orange {
+    margin: 0 ;
+    padding: 1rem 0 1rem 1rem;
+}
+
+form > div > div {
+    padding: 0.6rem;
+}
+
+form > div:last-child {
+    display: flex;
+    justify-content: end;
+}
+
+form > div > div > button {
+    all:unset;
+    cursor: pointer;
+    padding: 1rem 1.8rem;
+    color: white;
+}
+
+button:nth-child(1) {
+    background-color: rgb(98, 202, 84);
+}
+
+button:nth-child(2) {
+    background-color: rgb(247, 89, 89);
+}
+
+input[type="text"], input[type="password"] {
+    width: 40%;
+}
+
+.form-data > p > span.pr-1 {
+    width: 50% !important;
+}
+
+.form-data > p > span:nth-of-type(1) {
+    float:left
+}
+
+form p.inherit:last-child > span:first-child {
+    visibility: hidden;
+}
+form p.inherit:last-child > span:nth-child(2) {
+    font-size: x-small !important;
+}
