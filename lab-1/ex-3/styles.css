@@ -30,6 +30,7 @@
 
 .figure-container {
     width: 450px;
+    height: 100%;
     display:  flex;
     justify-content: space-between;
     font-size: small;

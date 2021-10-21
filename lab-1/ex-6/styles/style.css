@@ -1,0 +1,42 @@
+body {
+    margin: 0;
+    text-transform: capitalize;
+}
+
+navbar {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    border: solid orange;
+    border-width: 2px 0;
+}
+
+ul {
+    padding-left: 0;
+    margin: 0;
+}
+
+.flex-block {
+    display:  flex;
+    justify-content: space-between !important;
+    justify-content: center;
+}
+
+.account {
+    width: 40%;
+    justify-content: flex-end !important;
+}
+
+.navbar {
+    width: 20%;
+}
+
+.nav-item {
+    border: 1px solid blue;
+    background-color: red;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 3rem;
+    width: 8rem;
+}

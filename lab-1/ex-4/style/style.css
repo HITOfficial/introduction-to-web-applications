@@ -1,0 +1,49 @@
+.container {
+    width: 1000px;
+    height: 700px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: space-between;
+}
+
+.w-100 {
+    width: 100%;
+}
+
+.h-200px {
+    height: 200px;
+}
+
+.red {
+    background-color: red;
+}
+
+.yellow {
+    background-color: yellow;
+}
+
+.dodgerblue {
+    background-color: dodgerblue;
+}
+
+.w-15 {
+    width: 15%;
+}
+
+.w-80 {
+    width: 80%;
+}
+
+.two-blocks > div {
+    height: inherit;
+}
+
+.two-blocks {
+    display: flex;
+    justify-content: space-between;
+}
+
+.solid-3-border {
+    border: 3px solid black;
+}
