@@ -1,0 +1,49 @@
+.content {
+    margin: 0 auto;
+    width: 700px;
+    height: 1200px;
+}
+
+.border-dashed {
+    border-color: rgb(0, 73, 168);
+    border-style: dashed;
+}
+
+.content > h1:first-child {
+    border-width: 1px 0 1px 1px;
+    margin-bottom: 0;
+}
+
+.content > .intro {
+    margin-top: 0;
+    border-width: 0 0 0 1px;
+    padding-left: 10px;
+}
+
+.gallery {
+    padding-left: 5px;
+}
+
+.space-nowrap {
+    white-space: nowrap;
+}
+
+.figure-container {
+    width: 450px;
+    display:  flex;
+    justify-content: space-between;
+    font-size: small;
+    text-align: center;
+}
+
+.figure {
+    width: 209px;
+}
+
+.photo {
+    padding: 3px;
+    background-color: white;
+    border: 1px solid black;
+    box-shadow: 7px 8px 2px -5px rgb(66 68 90 / 50%);
+    display: flex;
+}
