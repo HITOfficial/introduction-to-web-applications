@@ -7,8 +7,68 @@
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="./styles/style.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+Antique:wght@500;700&display=swap" rel="stylesheet">
     </head>
     <body>
+        <form class="form-container" id="bank-transfer">
+            <h1>
+                BANK
+            </h1>
+            <label>
+                <span>
+                    Account number:
+                </span>
+                <input type="number" pattern="[0-9]{4}-[0-9]{4}-[0-9]{4}-[0-9]{4}" required>
+            </label>
+            <label>
+                <span>
+                    First Name:
+                </span>
+                <input type="text">
+            </label>
+            <label>
+                <span>
+                    Last Name:
+                </span>
+                <input type="text">
+            </label>
+            <label>
+                <span>
+                    E-mail:
+                </span>
+                <input type="email">
+            </label>
+            <label>
+                <span>
+                    Address:
+                </span>
+                <input type="text">
+            </label>
+            <label>
+                <span>
+                    Postal Code:
+                </span>
+                <input type="number">
+            </label>
+            <label>
+                <span>
+                    City:
+                </span>
+                <input type="text">
+            </label>
+            <label>
+                <span>
+                    Transfer Amount:
+                </span>
+                <input type="number" required>
+            </label>
+            <label>
+                <button type="reset" form="bank-transfer">RESET </button>
+                <button type="submit" form="bank-transfer">Transfer </button>
+            </label>
+        </form>
         <script src="" async defer></script>
     </body>
 </html>
