@@ -1,0 +1,63 @@
+ul {
+    margin: 5rem auto;
+    width: 60rem;
+    height: 2rem;
+    display: flex;
+    padding: 0;
+    list-style-type: none;
+}
+
+li {
+    width: 10rem;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    border: 1px dashed gray;
+    background-color: rgb(219, 219, 219);
+}
+
+a {
+    margin-left: 0.3rem;
+    text-decoration: none;
+    color: black;
+    text-transform: uppercase;
+    width: 100%;
+}
+
+li::before{
+    content: url('../images/link.png');
+}
+
+li:hover::before {
+    content: url('../images/go.png');
+    font-weight: 900;
+}
+
+li:hover {
+    background-color: greenyellow;
+    font-weight: 900;
+}
+
+li:nth-child(2)::before{
+    content: none !important;
+}
+
+li:nth-child(2)::after{
+    content: url('../images/bg_here.png');
+}
+
+li:nth-child(2){
+    background-color: white ;
+    font-weight: 900;
+
+}
+
+ul:nth-of-type(2){
+    display: block;
+}
+
+
+ul:first-of-type li:first-child::before, ul:first-of-type  li:first-child:hover:before{
+    content: url('../images/home.png');
+
+}
