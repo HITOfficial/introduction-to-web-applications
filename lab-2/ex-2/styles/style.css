@@ -1,0 +1,56 @@
+body {
+    margin: 0;
+}
+
+section > .box > div {
+    border-radius: 5%;
+    border: 2px solid #038bb4;
+    box-sizing: border-box;
+    background-color: rgb(197, 241, 255);
+    width: 20%;
+    height: 20%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    font-size: 3vw;
+}
+
+.box {
+    width: 100vw;
+    height: 100vh;
+    border: 3px solid rgb(0, 147, 192);
+    box-sizing: border-box;
+    display: flex;
+}
+
+.box > div:first-child {
+    height: 100%;
+}
+
+.box > div:nth-child(3) {
+    margin-top: 20vh
+}
+
+
+@Media (max-width:767px){
+    .box {
+        flex-direction: column;
+        font-size: 2vh;
+    }
+
+    .box > div:nth-child(3) {
+        margin: 0 0 0 25vw;
+    }
+
+    section > .box > div {
+        width: 25vw;
+        height: 25vh;
+    }
+
+    .box > div:first-child {
+        width: 100%;
+        height: 25vh;
+    }
+
+}
