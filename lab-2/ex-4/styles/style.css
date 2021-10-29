@@ -104,6 +104,10 @@ hr {
 @media (max-width:767px){
     .city {
         width: 100vw;
-        margin-top: 04;
+        margin-top: 0;
+        border-radius: 0;
+    }
+    img {
+        border-radius: 0;
     }
 }
