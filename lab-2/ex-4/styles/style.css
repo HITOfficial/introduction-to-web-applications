@@ -18,11 +18,13 @@ body {
     background-color: white;
     box-shadow: 0px 0px 17px -5px rgba(66, 68, 90, 1);
     margin-top: 5vh;
+    border-radius: 3%;
 }
 
 img {
     height: auto;
     width: 100%;
+    border-radius: 3%;
 }
 
 .city-content-container {
@@ -102,6 +104,6 @@ hr {
 @media (max-width:767px){
     .city {
         width: 100vw;
-        margin-top: 0;
+        margin-top: 04;
     }
 }
