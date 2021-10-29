@@ -1,0 +1,36 @@
+body {
+    margin: 0;
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    width: 100vw;
+    height: fit-content;
+
+}
+
+figure {
+    width: 30%;
+    height: fit-content;
+    margin: 0;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+figcaption {
+    text-align: center;
+}
+
+@media (max-width: 767px) {
+    .container {
+        flex-direction: column;
+    }
+    figure {
+        width: 100%;
+    }
+}
