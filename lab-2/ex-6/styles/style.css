@@ -1,0 +1,30 @@
+body {
+    margin: 0;
+    overflow: hidden; 
+}
+
+section {
+    display: flex;
+    height: 100vh;
+    width: 100vw;
+}
+
+img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+div {
+    width: 20%;
+    height: 100%;
+    transition: width 0.7s;
+}
+
+div:hover {
+    width: 40%;
+}
+
+div {
+    cursor: pointer;
+}
