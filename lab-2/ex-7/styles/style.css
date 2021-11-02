@@ -1,0 +1,147 @@
+body {
+    margin: 0;
+    text-transform: uppercase;
+    font-family: 'Zen Kaku Gothic Antique', sans-serif;
+}
+
+navbar {
+    width: 100vw;
+    background-color: rgb(223, 213, 231);
+    display: flex;
+    justify-content: space-between;
+    box-sizing: border-box;
+    padding: 1vh 2vw 0;
+    height: 15vh;
+}
+
+navbar > div {
+    width: 50%;
+    height: 50%;
+}
+
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: xx-large;
+    font-weight: 500;
+}
+
+.nav-item, .hamburger {
+    cursor: pointer
+}
+
+.hamburger {
+    width: 40px;
+    height: 20px;
+    border-top: 5px solid rgb(41, 41, 41);
+    position: relative;
+}
+
+.hamburger::before, .hamburger::after {
+    content: '';
+    width: 100%;
+    height: 5px;
+    background-color: rgb(41, 41, 41);
+    position: absolute;
+    transition: all 600ms;
+
+}
+
+.hamburger::before {
+    transform: translateY(5px);
+}
+
+.hamburger::after {
+    transform: translateY(15px);
+}
+
+.d-none {
+    display: none;
+}
+
+.hamburger-container {
+    order:5;
+    align-self: flex-end;
+}
+
+input[type=checkbox]:checked + label .hamburger::after {
+    transform: translateY(5px) rotate(90deg);
+    background: white;
+}
+input[type=checkbox]:checked + label .hamburger::before {
+    background: white;
+}
+
+input[type=checkbox]:checked + label .hamburger {
+    transform: rotate(45deg);
+    border: none;
+}
+
+input[type=checkbox]:checked + div {
+    display: block !important;
+    background: red;
+}
+
+.hamburger-container {
+    display: none;
+}
+
+@media (max-width:800px){
+    
+    .hamburger-container {
+        display: flex;
+        justify-content: flex-end;
+        padding: 1rem 1rem 0 0;
+        
+    }
+    
+    .nav-container {
+        width: 100vw;
+        height: fit-content;
+        position: absolute;
+        left: 0;
+        top: 0;
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    navbar {
+        padding-bottom: 2vh;
+        height: fit-content;
+    }
+
+    .nav-container > * {
+        height: 5vh;
+        width: 100%;
+    }
+
+    .nav-container > div{
+        text-align: center;
+    }
+
+    .logo {
+        font-size: medium;
+        font-weight: 400;
+    }
+
+    input[type=checkbox]:checked ~ div.nav-item, input[type=checkbox]:checked ~ label {
+        background-color: rgb(136, 99, 167);
+        color: white;
+    }
+    
+    input[type=checkbox]:not(:checked) ~div.nav-item {
+        display: none;
+    }
+
+    .nav-item {
+        order: 2;
+    }
+
+    .hamburger-container {
+        order: 1
+    }
+}
