@@ -1,25 +1,30 @@
-function navbarAnimation(navbar, navbarHeight, navItems) {
-    if (scrollY > navbarHeight) {
-        navbar.classList.add('scroll-evect-change')
-        for (i in navItems) {
-            navItems[i].classList.add('scroll-evect-item')
+function navbarAnimation(navbar, navItems) {
+    if (scrollY > navbar.offsetHeight) {
+        navbar.classList.add('scroll-evect-change');
+        for (let i = 0; i < navItems.length; i++) {
+            navItems[i].classList.add('scroll-evect-item');
         }
     }
     else {
-        document.querySelector('navbar').classList.remove('scroll-evect-change')
-        for (i in navItems) {
+        navbar.classList.remove('scroll-evect-change')
+        for (let i = 0; i < navItems.length; i++) {
             navItems[i].classList.remove('scroll-evect-item')
         }
     }
 }
 
-window.onload = stickyNavbar
+function resizePadding(navbar, firstSection) {
+    firstSection.style.paddingTop = String(navbar.offsetHeight) + "px";
+}
 
-document.querySelector('navbar').classList.add('scroll-evect-change')
+
+window.onload = stickyNavbar
 
 function stickyNavbar() {
     const navbar = document.querySelector('navbar');
     const navItems = document.getElementsByClassName('nav-item');
-    const navbarHeight = navbar.offsetHeight;
-    window.addEventListener('scroll', () => navbarAnimation(navbar, navbarHeight, navItems));
+    const firstSection = document.querySelector('main');
+    firstSection.style.paddingTop = String(navbar.offsetHeight) + "px";
+    window.addEventListener('scroll', () => navbarAnimation(navbar, navItems));
+    window.addEventListener('resize', () => resizePadding(navbar, firstSection));
 }
