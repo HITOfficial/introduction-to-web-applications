@@ -1,0 +1,88 @@
+body{
+    margin: 0;
+}
+
+navbar {
+    width: 100vw;
+    height: fit-content;
+    display: flex;
+    flex-wrap: wrap;
+    text-transform: capitalize;
+    border-bottom: 1px solid gray;
+}
+
+.container {
+    width: 33%;
+    list-style-type: none;
+    display: flex;
+    justify-content: space-between;
+    margin: none;
+    padding: none;
+    flex-wrap: wrap;
+    align-items: center;
+    padding: 1rem 0;
+}
+
+.container:first-child {
+    padding-left: 2vw;
+    box-sizing: border-box;
+    justify-content: start;
+}
+
+.container:last-child {
+    padding-right: 2vw;
+    box-sizing: border-box;
+    justify-content: end;
+}
+
+button {
+    all: unset;
+    padding: 1.5vh 2vh;
+    border-radius: 2vh;
+    background: rgb(73,255,91);
+    background: linear-gradient(90deg, rgba(73,255,91,1) 0%, rgba(56,255,96,1) 0%, rgba(19,145,220,1) 100%, rgba(11,122,246,1) 100%, rgba(255,255,255,1) 100%);
+    color: white;
+}
+
+navbar > div *, navbar > ul * {
+    cursor: pointer;
+}
+
+navbar > ul.container {
+    color: gray;
+}
+
+img {
+    width: 10rem;
+    height: fit-content;
+}
+
+@media (max-width:991px) {
+    .container {
+        margin: 0;
+        width: 100%;
+    }
+
+    .container > .nav-item {
+        width: 100%;
+        text-align: center;
+        padding: 1vh 0;
+        border-bottom: 1px solid gray;
+    }
+
+    .container > * {
+        font-size: x-large;
+    }
+
+    .container:last-child {
+        justify-content: center;
+    }
+
+    .container:first-child {
+        display: none;
+    }
+    
+    navbar {
+        border-bottom: none;
+    }
+}

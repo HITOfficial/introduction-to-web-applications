@@ -1,0 +1,73 @@
+body {
+    margin: 0;
+}
+
+navbar {
+    width: 100vw;
+    height: fit-content;
+    text-transform: capitalize;
+    color: white;
+    display: flex;
+    border-top: 1px solid orangered;
+    border-bottom: 1px solid orangered;
+    flex-wrap: wrap;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+    width: 50%;
+    display: flex;
+    justify-content: space-between;
+    list-style-type: none;
+    flex-wrap: wrap;
+}
+
+
+ul:nth-child(2){
+    justify-content: end;
+}
+
+.nav-item {
+    padding: 1vh 0.7vh;
+    background-color: red;
+    border: 1px solid blue;
+    box-sizing: border-box;
+    text-align: center;
+    cursor: pointer;
+}
+
+ul:nth-child(2) > .nav-item:first-child::before{
+    content: '';
+    background: url('../images/log-out.png');
+    width: 15px;
+    height: 15px;
+    background-size: 15px;
+    display: inline-block;
+}
+
+ul:nth-child(2) > .nav-item:nth-child(2):before{
+    content: '';
+    background: url('../images/shopping.png');
+    width: 15px;
+    height: 15px;
+    background-size: 15px;
+    display: inline-block;
+}
+
+@media (max-width:991px){
+    ul {
+        width: 100%;
+    }
+
+    .nav-item{
+        width: 100%;
+        padding: 3vh 0;
+        font-size: x-large;
+        border-bottom: none;
+    }
+    
+    ul:nth-child(2) > .nav-item:last-child{
+        border-bottom: 1px solid blue;
+    }
+}
