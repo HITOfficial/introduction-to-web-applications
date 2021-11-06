@@ -1,0 +1,241 @@
+body {
+    margin: 0;
+}
+
+.container {
+    margin-top: 5vh;
+    width: 100vw;
+    height: fit-content;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;   
+}
+
+.card-front {
+    width: 100%;
+    height: 100%;
+}
+
+.image {
+    height: 25vh;
+    width: 100%;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.text-container p {
+    margin: 0;
+    width: fit-content;
+    padding: 1rem;
+    background: rgb(255,242,0.1);
+    background: linear-gradient(180deg, rgba(255, 174, 0, 0.678) 0%, rgba(237,159,0.1) 100%, rgba(255, 174, 25, 0.1) 100%);
+    margin-right: 0.5vw;
+    z-index: 1;
+    border-radius: 2px;
+    letter-spacing: 2px;
+}
+
+.text-container p:last-child {
+    margin-bottom: 1vh;
+}
+
+.text-container {
+    display: flex;
+    flex-direction: column;
+    justify-content:end;
+    align-items: end;
+    height: 100%;
+    width: 100%;
+    color: white;
+    font-size: medium;
+    text-transform: uppercase;
+}
+
+.image:before {
+    position: absolute;
+    content: '';
+    top: 0;
+    left:0;
+    bottom:0;
+    right: 0;
+    z-index: 0;
+}
+
+.image::after {
+    content: '';
+    position: absolute;
+    left:0;
+    bottom: 0;
+    width: 100%;
+    z-index: 0;
+    border-style: solid;
+    border-width: 0 0 20px 100px;
+    border-color: transparent transparent white transparent;
+}
+
+.info {
+    color: gray;
+    font-size: small;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 3vh 0;
+    background-color: white;
+}
+
+.info p {
+    width: 50%;
+    border-bottom: 1px solid rgba(66, 68, 90, 0.1);
+    align-self: center;
+    text-align: center;
+    padding-bottom: 1vh;
+}
+
+.info p:last-child {
+    border-bottom: none;
+}
+
+
+.card:first-child:first-child .image:before {
+    background: linear-gradient(180deg, rgba(255,242,0,0.378) 0%, rgba(237,159,0,1) 100%, rgba(255,255,255,1) 100%);
+}
+
+.card:last-child .image:before {
+    background: linear-gradient(180deg, rgba(72, 255, 0, 0.378) 0%, rgb(0, 237, 118) 100%, rgba(255,255,255,1) 100%);
+}
+
+.card:first-child .text-container p {
+    background: linear-gradient(180deg, rgba(255, 174, 0, 0.378) 0%, rgba(237,159,0.1) 100%, rgba(255, 174, 25, 0.1) 100%);
+}
+
+.card:last-child .text-container p {
+    background: linear-gradient(180deg, rgba(72, 255, 0, 0.378) 0%, rgb(0, 237, 118) 100%, rgba(255,255,255,1) 100%);
+}
+
+.card:first-child .image {
+    background-image: url('../images/i1.jpg');
+}
+
+.card:last-child .image {
+    background-image: url('../images/i2.jpg');
+}
+
+
+.card {
+    background-color: transparent;
+    width: 30vw;
+    height: 60vh;
+    box-shadow: 8px 8px 24px 0px rgba(66, 68, 90, 1);
+    perspective: 2000px;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+}
+
+.card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.card:hover {
+    color: white;
+    transform: rotateY(180deg);
+}
+
+.card-front, .card-back {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-color: white;
+}
+
+.card-back {
+    z-index: 30;
+    transform: rotateY(180deg);
+    color: black;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.back-container{
+    width: 80%;
+    height: 70%;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: space-around;
+    justify-content: center;
+}
+
+button {
+    all:unset;
+    padding: 2vh 5vh;
+    background-color: white;
+    border-radius: 30px;
+    color: gray;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+.back-text-box h1 {
+    font-size: 8vh;
+    font-weight: 200;
+    margin: 0;
+}
+
+.back-text-box p {
+    font-size: large;
+    margin: 0;
+}
+
+.back-text-box {
+    width: 100%;
+    height: fit-content;
+    color: white;
+    text-align: center;
+}
+
+.card:first-child .card-back {
+    background: linear-gradient(180deg, rgb(255,242,0) 0%, rgb(237,159,0) 100%, rgb(255,255,255) 100%);
+}
+
+.card:last-child .card-back {
+    background: linear-gradient(45deg, rgb(38, 104, 12) 0%, rgb(0, 237, 118) 100%, rgb(255,255,255) 100%);
+
+}
+
+@media (max-width:1280px) {
+    .card {
+        width: 40vw;
+    }
+}
+
+@media (max-width:1065px) {
+    .card {
+        width: 45vw;
+    }
+}
+
+@media (max-width:881px) {
+    .card {
+        width: 48vw;
+    }
+}
+
+@media (max-width:771px) {
+    .card {
+        width: 80vw;
+        margin-bottom: 3vh;
+    }
+}
+
+@media (max-width:613px) {
+    .card {
+        width: 90vw;
+        margin-bottom: 3vh;
+    }
+}
