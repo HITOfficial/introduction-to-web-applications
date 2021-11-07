@@ -1,0 +1,344 @@
+body {
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+}
+
+.container {
+    width: 75vw;
+    height: 40vh;
+    background-color: gainsboro;
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
+    margin: 10vh auto;
+    box-shadow: 0px -0px 5px 0px rgba(66, 68, 90, 1);
+}
+
+.icons-container {
+    width: 15%;
+    height: 100%;
+}
+
+.shoe-box {
+    width: 45%;
+    height: 95%;
+    display: flex;
+    justify-content: end;
+}
+
+.shoe-content {
+    margin-top: 2%;
+    width: 90%;
+    height: 90%;
+    padding: 2%;
+    position: relative;
+}
+
+.blue-gradient {
+    background: linear-gradient(80deg, rgba(0,63,255,0.6779702012383901) 0%, rgb(0, 183, 255) 100%, rgba(255,255,255,1) 100%);
+}
+
+.red-gradient {
+    background: linear-gradient(80deg, rgba(255, 17, 0, 0.678) 0%, rgb(175, 62, 27) 100%, rgba(255,255,255,1) 100%);
+    
+}
+
+.green-gradient {
+    background: linear-gradient(80deg, rgba(16, 138, 0, 0.678) 0%, rgb(43, 221, 102) 100%, rgba(255,255,255,1) 100%);
+
+}
+.orange-gradient {
+    background: linear-gradient(80deg, rgba(196, 111, 0, 0.678) 0%, rgb(255, 174, 0) 100%, rgba(255,255,255,1) 100%);
+}
+
+.black-gradient {
+    background: linear-gradient(80deg, rgba(19, 19, 19, 0.678) 0%, rgb(99, 99, 99) 100%, rgba(255,255,255,1) 100%);
+    
+}
+
+.icons-container {
+    width: 100%;
+    height: 15%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+.nike-logo {
+    background-image: url('../images/nike-logo.png');
+    background-position: center;
+    background-size: cover;
+    width: 25%;
+    height: 70%;
+}
+
+.icon {
+    width: 3vw;
+    height: 3vw;
+    border-radius: 50%;
+    background-color: aliceblue;
+    background-position: center;
+    background-size: cover;
+    position: relative;
+}
+
+.icon::after {
+    position: absolute;
+    content: '';
+    background-image: url('../images/share-icon.png');
+    width: 50%;
+    height: 50%;
+    top: 20%;
+    left: 20%;
+    background-size: cover;
+    background-image: transparent;
+}
+
+.shoe {
+    position: absolute;
+    background-image: url('../images/blue.png');
+    bottom: 5%;
+    right: 2%;
+    width: 125%;
+    height: 70%;
+    background-position: center;
+    background-size: cover;
+    transform: rotate(-15deg);
+    z-index: 2;
+}
+
+.shoe-content::before {
+    position: absolute;
+    content: 'NIKE';
+    font-size: 12vw;
+    font-weight: 900;
+    top: 15%;
+    left: 8%;
+    z-index: 1;
+    color: white;
+    opacity: 0.2;
+}
+
+.content-box {
+    height: 97%;
+    width: 40%;
+    background-color: white;
+    box-shadow: 13px 11px 24px -12px rgba(66, 68, 90, 1);
+    padding: 1vw;
+    box-sizing: border-box;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    display: flex;
+    width: 50%;
+    justify-content: space-around;
+}
+
+.color-item{
+    width: 1vw;
+    height: 1vw;
+    border-radius: 90%;
+    padding:3px;
+}
+
+.color-item:hover {
+    padding: 0;
+    box-shadow: 1px 1px 3px 1px rgba(66, 68, 90, 1);
+    border: 3px solid rgb(255, 255, 255);
+    z-index: 3;
+}
+
+
+.size-list {
+    width: 80%;
+    height: 3vh;
+    justify-content: space-between;
+}
+
+.text-content {
+    width: 90%;
+    height: fit-content;
+    padding-bottom: 0.5vh;
+    border-bottom: 1px solid rgba(36, 36, 36, 0.2);
+    margin: 1vh 0;
+}
+
+.size-item {
+    width: 15%;
+    height: 100%;
+    background-color: gainsboro;
+    border-radius: 10%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.blue {
+    background-color: rgb(49, 121, 255);
+    color: white
+}
+
+.red {
+    background-color: rgb(255, 44, 55);
+}
+
+.green {
+    background-color: rgb(48, 187, 55);
+}
+
+.orange {
+    background-color: rgb(255, 145, 0);
+}
+
+.black {
+    background-color: rgb(36, 36, 36);
+}
+
+
+.size-item span {
+    height: 100%;
+    vertical-align: middle;
+}
+
+.buy-box {
+    display: flex;
+    width: 90%;
+    height: 4vh;
+    align-items: center;
+    justify-content: space-between;
+}
+
+button {
+    all:unset;
+    height: 80%;
+    font-size: small;
+    color: white;
+    padding: 0 1vw;
+}
+
+.price {
+    position: relative;
+    font-size: x-large;
+    font-weight: 700;
+}
+
+.price::before {
+    content: '$';
+    position: absolute;
+    font-size: small;
+    left: -5px;
+}
+
+.description {
+    color: gray;
+    font-size: small;
+}
+
+.new {
+    font-size: small;
+    padding: 0.2vw;
+    border-radius: 10%;
+    margin-top: -1vh;
+}
+
+h2 {
+    margin: 0;
+}
+
+p {
+    margin: 0.5vw 0;
+}
+
+h4 {
+    margin: 1vh 0;
+}
+
+
+
+.title {
+    position: relative;
+}
+
+.title::after {
+    position: absolute;
+    content: 'NEW';
+    font-size: x-small;
+    padding: 0.2vw;
+    border-radius: 10%;
+    margin-top: -1vh;
+    background-color: rgb(49, 121, 255);
+    color: white;
+    top:1vw;
+    right: -3vw;
+}
+
+
+
+
+@media (min-width: 1265px){
+    .shoe {
+        height: 70%;
+        width: 110%;
+    }
+    .shoe-content::before {
+        left:0;
+    }
+}
+
+@media (min-width: 1450px){
+    .shoe {
+        height: 65%;
+        width: 100%;
+    }
+}
+
+@media (min-width: 1550px){
+    .container {
+        width: 60vw;
+    }
+    .shoe {
+        height: 65%;
+        width: 90%;
+    }
+}
+
+@media (max-width: 890px){
+    .container {
+        width: 90vw;
+    }
+}
+
+@media (max-width: 740px){
+    .container {
+        width: 95vw;
+    }
+}
+
+@media (max-width: 690px){
+    .container {
+        width: 100vw;
+    }
+}
+
+@media (max-width: 650px){
+    .shoe {
+        width: 100%;
+        height: 50%;
+        bottom: 15%
+    }
+    .content-box {
+        width: 45%;
+    }
+}
+
+li, button {
+    cursor: pointer;
+}
+
+.color, .size {
+    font-weight: 500;
+}
