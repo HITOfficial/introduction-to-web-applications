@@ -1,0 +1,18 @@
+.photo {
+    margin: 0 auto;
+    width: 30vw;
+    height: calc((30vw/900)*600);
+    box-sizing: border-box;
+    border-radius: 10%;
+    cursor: pointer;
+}
+
+.mountain {
+    background-image: url('../images/mountain.jpg');
+    border: 1vw solid rgb(175, 104, 104);
+}
+
+.ocean {
+    background-image: url('../images/ocean.jpg');
+    border: 1vw solid rgb(104, 173, 175);
+}
