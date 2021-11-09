@@ -1,0 +1,24 @@
+h1 {
+    margin-top: 2vh;
+    text-align: center;
+}
+
+.buttons {
+    text-align: center;
+}
+
+button {
+    all: unset;
+    padding: 1rem;
+    border-radius: 10%;
+    cursor: pointer;
+}
+
+.increment {
+    background-color: bisque;
+
+}
+
+.remove-event {
+    background-color: goldenrod;
+}
