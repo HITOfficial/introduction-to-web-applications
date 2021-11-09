@@ -1,0 +1,33 @@
+button {
+    all: unset;
+    width: 5rem;
+    height: 2rem;
+    cursor: pointer;
+    text-align: center;
+    border-radius: 10%;
+    color: white;
+}
+.add {
+    background-color: green;
+}
+.remove {
+    background-color: tomato;
+}
+
+ul {
+    list-style-type: none;
+}
+
+li {
+    width: 2rem;
+    height: fit-content;
+    text-align: center;
+    margin-bottom: 1rem;   
+    background-color: whitesmoke;
+    color: gray
+}
+
+li:nth-child(odd) {
+    background-color: gray;
+    color: whitesmoke
+}
