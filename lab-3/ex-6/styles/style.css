@@ -1,0 +1,154 @@
+.book {
+    background-color: rgb(241, 255, 253);
+    width: 100vw;
+    padding: 2rem;
+    box-sizing: border-box;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+.entries {
+    width: 100%;
+    height: fit-content;
+    margin-bottom: 3rem;
+}
+
+label p {
+    margin: 0;
+    color: grey;
+    font-size: x-small;
+}
+
+.entry {
+    background-color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    box-shadow: 0px 1px 3px black;
+    margin-bottom: 1rem
+}
+
+.form {
+    display: flex;
+    width: 100%;
+    height: 5rem;
+    background-color: white;
+    align-items: center;
+    padding: 0 1rem;
+    justify-content: space-between;
+    box-shadow: 0px 1px 3px black;
+}
+
+.uppercase {
+    text-transform: uppercase;
+}
+
+label {
+    width: 32%;
+    height: fit-content;
+}
+
+input[type=submit] {
+    all:unset;
+    width: 100%;
+    background-color: rgb(54, 190, 77);
+    text-align: center;
+    color: white;
+    font-size: small;
+    height: 2.4rem;
+    border-radius: 0.5rem;
+    cursor: pointer;
+}
+
+
+input[type=text], input[type=number] {
+    height: 2rem;
+    width: 100%;
+}
+
+label:last-child p {
+    visibility: hidden;
+}
+
+label:last-child {
+    width: 30%;
+}
+
+.remove {
+    width: 2rem;
+    height: 2rem;
+    background-color: rgb(54, 190, 77);
+    border-radius: 0.2rem;
+    position: relative;
+    cursor: pointer;
+}
+
+.remove::after {
+    position: absolute;
+    left:35%;
+    top: 15%;
+    content: 'x';
+    color: white;
+}
+
+.entry:last-child {
+    margin-bottom: 0;
+}
+
+.invalid-phone, .invalid-text {
+    position: relative;
+}
+
+.invalid-phone::after{
+    position: absolute;
+    color: red;
+    font-size:small;
+    content: 'phone number need to have 9 digits';
+    left: 0;
+    bottom:-1rem;
+    z-index: 5;
+}
+
+.invalid-text::after{
+    position: absolute;
+    color: red;
+    font-size:small;
+    content: 'just letters and first capitalize';
+    left: 0;
+    bottom:-1rem;
+    z-index: 5;
+}
+
+
+@media(max-width:700px){
+    .invalid-phone::after, .invalid-text::after {
+        font-size: x-small;
+    }
+}
+
+@media (min-width: 1000px) {
+    .entries, .form {
+        width: 80%;
+    }
+}
+
+@media (min-width: 1300px) {
+    .entries, .form {
+        width: 60%;
+    }
+}
+
+@media (min-width: 1600px) {
+    .entries, .form {
+        width: 51%;
+    }
+}
+
+
+
