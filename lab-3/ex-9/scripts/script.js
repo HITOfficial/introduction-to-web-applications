@@ -4,6 +4,7 @@ class ActualEmployee {
     }
 }
 
+
 function cardChanger() {
     const employees = [
         { fullName: 'Peter Piotrowski', funct: 'intern', src: 'images/p1.jpg' },
@@ -30,6 +31,7 @@ function cardChanger() {
     random.addEventListener('click', () => changeEmployeeCard(employees, actualEmployee, imageElement, fullNameElement, functionElement, null))
 
 }
+
 
 function changeEmployeeCard(employees, actualEmployee, imageElement, fullNameElement, functionElement, changer) {
     if (changer === null) {
