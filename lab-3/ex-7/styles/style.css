@@ -1,0 +1,31 @@
+button {
+    all:unset;
+    background-color: antiquewhite;
+    padding: 1rem;
+    border-radius: 10%;
+    cursor:pointer;
+    margin: 0 auto;
+    transition: background-color 700ms;
+}
+
+.container {
+    background-color: aliceblue;
+}
+
+button:hover {
+    background-color: cadetblue;
+}
+
+.single-query {
+    width: 100%;
+    background-color: aliceblue;
+    height: fit-content;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin-bottom: 2rem;
+}
+
+.answers {
+    text-align: center;
+}
