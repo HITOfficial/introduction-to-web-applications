@@ -1,0 +1,144 @@
+body {
+    margin: 0;
+    background-color: rgb(237, 245, 248);
+    text-align: center;
+}
+
+.image {
+    width: 10rem;
+    height: 10rem;
+    background-position: center;
+    background-size: contain;
+    border-radius: 50%;
+    position: relative;
+    box-shadow: 5px -3px 0px 1px rgb(27 157 218);
+    margin: 0 auto;
+}
+
+.image::after {
+    position: absolute;
+    text-align: center;
+    content: '"';
+    left: 0;
+    top: 10%;
+    height: 2.5rem;
+    width: 2.5rem;
+    background-color: rgb(27, 157, 218);
+    border-radius: 50%;
+    color: white;
+    font-size: 3rem;
+}
+
+.full-name {
+    font-weight: 700;
+}
+
+.function {
+    text-transform: uppercase;
+    color: rgb(27, 157, 218)
+}
+
+.description {
+    width: 90%;
+    margin: 0 auto;
+}
+
+.capitalize {
+    text-transform: capitalize;
+}
+
+.container {
+    margin: 5rem auto;
+    background-color: rgb(255, 255, 255);
+    box-shadow: 0 0 5px rgb(116, 116, 116);
+    width: 60vw;
+    padding: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.btn {
+    all:unset;
+    color: rgb(27, 157, 218);
+    cursor: pointer;
+}
+
+.left, .right {
+    font-size: xx-large;
+}
+
+.left-right {
+    margin: 0 auto;
+    width: 4rem;
+    display: flex;
+    justify-content: space-between;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+}
+
+h1 {
+    margin: 3rem auto 0;
+    position: relative;
+    width: 20rem;
+}
+
+h1::after {
+    content: '';
+    position: absolute;
+    width: 5rem;
+    height: 5px;
+    background-color: rgb(27, 157, 218);
+    bottom: -1rem;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.random {
+    border:3px solid rgb(27, 157, 218);
+    background-color: rgb(237, 245, 248);
+    padding: 0.2rem;
+    border-radius: 10%;
+    text-transform: capitalize;
+    font-size: small;
+}
+
+.switchers {
+    margin-top: 0.5rem;
+}
+
+.none {
+    display: none;
+}
+
+
+@media (max-width:700px) {
+        .container {
+            width: 75vw;
+        }
+}
+
+@media (max-width:600px) {
+    .container {
+        width: 80vw;
+    }
+}
+
+@media (min-width:1100px) {
+    .container {
+        width: 45vw;
+    }
+}
+
+@media (min-width:1400px) {
+    .container {
+        width: 30vw;
+    }
+}
+
+@media (min-width:1700px) {
+    .container {
+        width: 25vw;
+    }
+}
