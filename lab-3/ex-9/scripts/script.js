@@ -13,7 +13,6 @@ function cardChanger() {
         { fullName: 'Johanna Edward', funct: 'accountant', src: 'images/p5.jpg' },
         { fullName: 'Bubmba Ki', funct: 'designer', src: 'images/p6.jpg' },
         { fullName: 'John Bravo', funct: 'programer', src: 'images/p7.jpg' }
-
     ]
 
     const actualEmployee = new ActualEmployee();
@@ -56,7 +55,6 @@ function changeEmployeeCard(employees, actualEmployee, imageElement, fullNameEle
     imageElement.style.backgroundImage = `url(${employees[index].src})`;
     fullNameElement.innerText = employees[index].fullName;
     functionElement.innerText = employees[index].funct;
-
 }
 
 
