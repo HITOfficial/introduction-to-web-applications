@@ -11,11 +11,11 @@ function updateSize(element, size) {
 }
 
 
-function actualSizeInfo(element, bloonProperties, sizeInfoElement) {
+function actualSizeInfo(e, bloonProperties, sizeInfoElement) {
     // removing inner after bloon poop
     if (bloonProperties.popped === true) {
         sizeInfoElement.innerHTML = '';
-    } else if (element.ctrlKey) {
+    } else if (e.ctrlKey) {
         // control key was down
         sizeInfoElement.innerHTML = `size: ${bloonProperties.currentSize}`;
     }
@@ -48,7 +48,8 @@ function bloonManipulation() {
     const sizeInfoElement = document.querySelector('.size-info');
     bloonProperties = new BloonProperies();
     addEventListener('keydown', (e) => changeSize(e, bloonProperties, bloonElement, sizeInfoElement));
-    bloonClassElement.addEventListener('click', (e) => actualSizeInfo(e, bloonProperties, sizeInfoElement));
+    bloonClassElement.addEventListener('contextmenu', (e) => actualSizeInfo(e, bloonProperties, sizeInfoElement));
 }
+
 
 window.onload = bloonManipulation
