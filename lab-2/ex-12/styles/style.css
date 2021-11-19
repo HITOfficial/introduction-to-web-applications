@@ -4,16 +4,23 @@ body {
 }
 
 :root {
-    --color: linear-gradient(80deg, rgba(0,63,255,0.6779702012383901) 0%, rgb(0, 183, 255) 100%, rgba(255,255,255,1) 100%);
-}
 
+    --color1: linear-gradient(80deg, rgba(0,63,255,0.6779702012383901) 0%, rgb(0, 183, 255) 100%, rgba(255,255,255,1) 100%);
+    --color2: linear-gradient(80deg, rgba(255, 17, 0, 0.678) 0%, rgb(175, 62, 27) 100%, rgba(255,255,255,1) 100%);
+    --color3: linear-gradient(80deg, rgba(16, 138, 0, 0.678) 0%, rgb(43, 221, 102) 100%, rgba(255,255,255,1) 100%);
+    --color4: linear-gradient(80deg, rgba(196, 111, 0, 0.678) 0%, rgb(255, 174, 0) 100%, rgba(255,255,255,1) 100%);
+    --color5: linear-gradient(80deg, rgba(19, 19, 19, 0.678) 0%, rgb(99, 99, 99) 100%, rgba(255,255,255,1) 100%);
+    --color: var(--color1);
+    --blue:rgb(49, 121, 255);
+    --red: rgb(255, 44, 55);
+    --green: rgb(48, 187, 55);
+    --orange: rgb(255, 145, 0);
+    --black: rgb(36, 36, 36);
+    --actual-color: var(--blue);
+}
 
 .actual-bg {
-    background-color: var(--color);
-}
-
-.size-item:active {
-
+    background: var(--color);
 }
 
 .color-item > input[type=radio] {
@@ -31,7 +38,7 @@ body {
     overflow: hidden;
     margin: 10vh auto;
     box-shadow: 0px -0px 5px 0px rgba(66, 68, 90, 1);
-    min-height: 300px;
+    min-height: 400px;
     align-items: center;
 }
 
@@ -53,28 +60,6 @@ body {
     height: 90%;
     padding: 2%;
     position: relative;
-}
-
-.blue-gradient {
-    background: linear-gradient(80deg, rgba(0,63,255,0.6779702012383901) 0%, rgb(0, 183, 255) 100%, rgba(255,255,255,1) 100%);
-}
-
-.red-gradient {
-    background: linear-gradient(80deg, rgba(255, 17, 0, 0.678) 0%, rgb(175, 62, 27) 100%, rgba(255,255,255,1) 100%);
-    
-}
-
-.green-gradient {
-    background: linear-gradient(80deg, rgba(16, 138, 0, 0.678) 0%, rgb(43, 221, 102) 100%, rgba(255,255,255,1) 100%);
-
-}
-.orange-gradient {
-    background: linear-gradient(80deg, rgba(196, 111, 0, 0.678) 0%, rgb(255, 174, 0) 100%, rgba(255,255,255,1) 100%);
-}
-
-.black-gradient {
-    background: linear-gradient(80deg, rgba(19, 19, 19, 0.678) 0%, rgb(99, 99, 99) 100%, rgba(255,255,255,1) 100%);
-    
 }
 
 .icons-container {
@@ -150,6 +135,12 @@ body {
     min-height: fit-content;
 }
 
+.color-list {
+    display: flex;
+    justify-content: space-between;
+    width: 40%;
+}
+
 ul {
     margin: 0;
     padding: 0;
@@ -166,19 +157,20 @@ ul {
     border-radius: 90%;
     padding:3px;
 }
-
+/* 
 .color-item:hover {
     padding: 0;
     box-shadow: 1px 1px 3px 1px rgba(66, 68, 90, 1);
     border: 3px solid rgb(255, 255, 255);
     z-index: 3;
-}
+} */
 
 
 .size-list {
     width: 80%;
     justify-content: space-between;
     height: fit-content;
+    display: flex;
 }
 
 .text-content {
@@ -243,22 +235,26 @@ button {
     padding: 0 1vw;
 }
 
+.buy-box button {
+    background-color: var(--actual-color);
+}
+
 .price {
     position: relative;
-    font-size: 3vh;
+    font-size: 30px;
     font-weight: 700;
 }
 
 .price::before {
     content: '$';
     position: absolute;
-    font-size: 1vh;
-    left: -5px;
+    font-size: 15px;
+    left: -10px;
 }
 
 .description {
     color: gray;
-    font-size: 1.5vh;
+    font-size: 15px;
 }
 
 .new {
@@ -291,13 +287,122 @@ h4 {
     padding: 0.2vw;
     border-radius: 10%;
     margin-top: -1vh;
-    background-color: rgb(49, 121, 255);
+    background-color: var(--actual-color);
     color: white;
     top:1vw;
     right: -3vw;
 }
 
+label {
+    cursor: pointer;
+}
 
+
+li, button {
+    cursor: pointer;
+}
+
+.color, .size {
+    font-weight: 500;
+}
+input[type="radio"]:checked + div.test { font-weight: bold;}
+
+.d-none {
+    display: none;
+}
+
+
+
+input.color-blue[type=radio]:checked ~ * {
+    --color: var(--color1);
+    --actual-color: var(--blue);
+}
+
+input.color-red[type=radio]:checked ~ * {
+    --color: var(--color2);
+    --actual-color: var(--red);
+}
+
+input.color-green[type=radio]:checked ~ * {
+    --color: var(--color3);
+    --actual-color: var(--green);
+}
+
+input.color-orange[type=radio]:checked ~ * {
+    --color: var(--color4);
+    --actual-color: var(--orange);
+}
+
+input.color-black[type=radio]:checked ~ * {
+    --color: var(--color5);
+    --actual-color: var(--black);
+}
+
+
+input.color-blue[type=radio]:checked ~ .container .color-blue {
+    padding: 0;
+    box-shadow: 1px 1px 3px 1px rgba(66, 68, 90, 1);
+    border: 3px solid rgb(255, 255, 255);
+    z-index: 3;
+}
+
+input.color-red[type=radio]:checked ~ .container .color-red {
+    padding: 0;
+    box-shadow: 1px 1px 3px 1px rgba(66, 68, 90, 1);
+    border: 3px solid rgb(255, 255, 255);
+    z-index: 3;
+}
+
+input.color-green[type=radio]:checked ~ .container .color-green {
+    padding: 0;
+    box-shadow: 1px 1px 3px 1px rgba(66, 68, 90, 1);
+    border: 3px solid rgb(255, 255, 255);
+    z-index: 3;
+}
+
+input.color-orange[type=radio]:checked ~ .container .color-orange {
+    padding: 0;
+    box-shadow: 1px 1px 3px 1px rgba(66, 68, 90, 1);
+    border: 3px solid rgb(255, 255, 255);
+    z-index: 3;
+}
+
+input.color-black[type=radio]:checked ~ .container .color-black {
+    padding: 0;
+    box-shadow: 1px 1px 3px 1px rgba(66, 68, 90, 1);
+    border: 3px solid rgb(255, 255, 255);
+    z-index: 3;
+    --color: var(--color3);
+}
+
+input.size-7[type=radio]:checked ~ .container .size-7-item {
+    background-color: var(--actual-color);
+    color: white
+}
+
+input.size-8[type=radio]:checked ~ .container .size-8-item {
+    background-color: var(--actual-color);
+    color: white
+}
+
+input.size-9[type=radio]:checked ~ .container .size-9-item {
+    background-color: var(--actual-color);
+    color: white
+}
+
+input.size-10[type=radio]:checked ~ .container .size-10-item {
+    background-color: var(--actual-color);
+    color: white
+}
+
+input.size-11[type=radio]:checked ~ .container .size-11-item {
+    background-color: var(--actual-color);
+    color: white
+}
+
+input.size-9[type=radio]:checked {
+    --color: var(red,blue);
+}
 
 @media (max-width: 991px) {
     .container {
@@ -305,10 +410,13 @@ h4 {
         width: 50vw;
         height: 75vh;
         min-height: 600px;
+        min-width: 400px;
     }
+
     .content-box {
         width: 100%;
     }
+    
     .shoe-box {
         width: 100%;
     }
@@ -324,7 +432,7 @@ h4 {
         height: 90%;
     }
     .shoe {
-        height: 85%;
+        height: 80%;
         width: 100%;
         top: 2rem;
         right: 4rem;
@@ -336,6 +444,7 @@ h4 {
     .container {
         width: 60vw;
     }
+    
     .shoe {
         height: 80%;
     }
@@ -346,6 +455,7 @@ h4 {
         height: 70%;
         width: 110%;
     }
+
     .shoe-content::before {
         left:0;
     }
@@ -362,16 +472,17 @@ h4 {
     .container {
         width: 60vw;
     }
+
     .shoe {
         height: 65%;
         width: 90%;
     }
 }
 
-li, button {
-    cursor: pointer;
+@media (max-width: 930px) {
+    .shoe {
+        height: 50%;
+        top: 7rem;
+    }
 }
 
-.color, .size {
-    font-weight: 500;
-}
