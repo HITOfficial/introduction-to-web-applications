@@ -61,17 +61,7 @@ ul li ul li:hover {
     padding-left: 2vw;
 }
 
-ul li:hover ul::after {
-    position: absolute;
-    content: '';
-    top: 1.9vh;
-    left: 15vw;
-    width: 0;
-    height: 0;
-    border-left: 1vh solid transparent;
-    border-right: 1vh solid transparent;
-    border-top: 2vh solid rgb(255, 77, 77);
-}
+
 
 ul li ul li {
     padding-left: 10%;
@@ -80,7 +70,6 @@ ul li ul li {
     box-sizing: border-box;
     padding-left: 1vw;
     background-color: rgb(39, 0, 146);
-
 }
 
 ul li ul li:hover::before {
@@ -93,6 +82,24 @@ ul li ul li:hover::before {
     border-left: 0.8vh solid greenyellow;
     border-bottom: 2.5vh solid transparent;
     border-top: 2.5vh solid transparent;
+}
+
+.container > ul > li:hover ul::after {
+    position: absolute;
+    content: '';
+    top: 1.9vh;
+    left: 15vw;
+    width: 0;
+    height: 0;
+    border-left: 1vh solid transparent;
+    border-right: 1vh solid transparent;
+    border-top: 2vh solid rgb(255, 77, 77);
+}
+
+ul li ul {
+    width: fit-content;
+    height: fit-content;
+    position: relative;
 }
 
 input {
