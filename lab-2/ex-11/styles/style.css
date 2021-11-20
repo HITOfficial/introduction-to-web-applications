@@ -47,11 +47,11 @@ label {
     margin: 0;
 }
 
-input[type=checkbox]:checked {
+input[type=radio]:checked {
     background: white;
 }
 
-input[type=checkbox]:checked + label ul {
+input[type=radio]:checked + label ul {
     display: inline;
     position: relative;
 }
