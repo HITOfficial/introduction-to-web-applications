@@ -4,6 +4,11 @@ body{
 
 html {
     scroll-behavior: smooth;
+    overflow-y: overlay;
+}
+
+a {
+    text-decoration: none;
 }
 
 navbar {
@@ -70,7 +75,7 @@ main {
 }
 
 section {
-    height: 50vh;
+    height: 80vh;
     width: 100%;
     background-size: cover;
     background-position: center;

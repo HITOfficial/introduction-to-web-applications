@@ -18,8 +18,8 @@ html {
 }
 
 header, navigation, main, .ads, footer {
-    border: 5px solid red;
-    border-radius: 5px;
+    border: 1px solid black;
+    border-radius: 2px;
     box-sizing: border-box;
 }
 
@@ -47,7 +47,7 @@ sidebar {
     display: flex;
     justify-content: space-around;
     align-items: center;
-    background-color: #97c1f785;
+    background-color: #e4e4e485;
     width: 95%;
     height: 90%;
     border-radius: 5vw 2vw 5vw 2vw;
@@ -178,6 +178,7 @@ input[type=radio] {
     justify-content: space-around;
     align-items: center;
     height: 70vh;
+    overflow: hidden;
 }
 
 .sections::after {
@@ -307,7 +308,7 @@ section * {
 
     .card {
         border-radius: 2vw;
-        height: 95%;
+        height: 85%;
         display: flex;
         flex-direction: column;
         text-align: center;
