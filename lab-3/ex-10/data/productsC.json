@@ -1,0 +1,69 @@
+{
+	"Deskorolki": [
+		{
+			"nazwa": "Blind"
+		},
+		{
+			"nazwa": "Fila"
+		},
+		{
+			"nazwa": "PlanB"
+		},
+		{
+			"nazwa": "Amok"
+		},
+		{
+			"nazwa": "Tensor"
+		},
+		{
+			"nazwa": "Kickflip"
+		},
+		{
+			"nazwa": "Varial"
+		}
+	],
+	"Rowery": [
+		{
+			"nazwa": "Merida"
+		},
+		{
+			"nazwa": "Raymon"
+		},
+		{
+			"nazwa": "Monteria"
+		}
+	],
+	"Soki": [
+		{
+			"nazwa": "Jupi"
+		},
+		{
+			"nazwa": "Kubuś"
+		},
+		{
+			"nazwa": "Hoop"
+		}
+	],
+	"Półprodukty": [
+		{
+			"nazwa": "Spaghetti"
+		},
+		{
+			"nazwa": "Pierogi"
+		},
+		{
+			"nazwa": "Kotlet"
+		}
+	],
+	"Owoce": [
+		{
+			"nazwa": "Jabłko"
+		},
+		{
+			"nazwa": "Banan"
+		},
+		{
+			"nazwa": "Pomarańcza"
+		}
+	]
+}
