@@ -9,16 +9,13 @@ function buttonsEvent() {
     const blueElement = document.querySelector('.blue');
     const redElement = document.querySelector('.red');
     const yellowElement = document.querySelector('.yellow');
-
+    console.log('propagation');
     blueElement.addEventListener('click', blueEvent);
-    redElement.addEventListener('click', redEvent);
-    yellowElement.addEventListener('click', yellowEvent);
-
-
-    if (propagationFlag == false) {
-        blueElement.removeEventListener('click', blueEvent);
-        redElement.removeEventListener('click', redEvent);
-        yellowElement.removeEventListener('click', yellowEvent);
+    if (totalSum < 30) {
+        redElement.addEventListener('click', redEvent);
+    }
+    if (totalSum < 50) {
+        yellowElement.addEventListener('click', yellowEvent);
     }
     propagationFlag = !propagationFlag
 }
@@ -26,16 +23,16 @@ function buttonsEvent() {
 
 function checkTotalSum() {
     if (totalSum > 30) {
-        document.querySelector('.red').removeEventListener('click', redEvent);
+        document.querySelector('.yellow').removeEventListener('click', yellowEvent);
         if (totalSum > 50) {
-            document.querySelector('.yellow').removeEventListener('click', yellowEvent);
+            document.querySelector('.red').removeEventListener('click', redEvent);
         }
     }
+    document.querySelector('.counter').innerHTML = totalSum;
 }
 
 
 function blueEvent(e) {
-    e.stopPropagation();
     document.querySelector('p').innerText = 'You pressed blue button with value 1';
     totalSum += 1;
     checkTotalSum();
@@ -43,7 +40,9 @@ function blueEvent(e) {
 
 
 function redEvent(e) {
-    e.stopPropagation();
+    if (!propagationFlag) {
+        e.stopPropagation();
+    }
     document.querySelector('p').innerText = 'You pressed red button with value 2';
     totalSum += 2;
     checkTotalSum();
@@ -51,7 +50,9 @@ function redEvent(e) {
 
 
 function yellowEvent(e) {
-    e.stopPropagation();
+    if (!propagationFlag) {
+        e.stopPropagation();
+    }
     document.querySelector('p').innerText = 'You pressed yellow button with value 5'
     totalSum += 5;
     checkTotalSum();

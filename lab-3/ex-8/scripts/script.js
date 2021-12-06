@@ -17,7 +17,7 @@ function actualSizeInfo(e, bloonProperties, sizeInfoElement) {
         sizeInfoElement.innerHTML = '';
     } else if (e.ctrlKey) {
         // control key was down
-        sizeInfoElement.innerHTML = `size: ${bloonProperties.currentSize}`;
+        sizeInfoElement.innerHTML = `size: ${(bloonProperties.currentSize) / 500 * 100} %`;
     }
 }
 
