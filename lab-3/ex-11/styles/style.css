@@ -1,0 +1,160 @@
+body {
+    margin: 0;
+    font-family: 'Smooch', cursive;
+    letter-spacing: 5px;
+}
+
+.board {
+    position: relative;
+    height: 100vh;
+    min-height: 500px;
+    overflow: hidden;
+    background-image: url('../images/board-bg.jpg');
+    width:100%;
+    background-color: rebeccapurple;
+    background: cover;
+    background-position: center;
+}
+
+.zombie {
+    position: absolute;
+    background-image: url('../images/walkingdead.png');
+    height: 312px;
+    left: -30%;
+    width: 200px; /* 10 animation frames */
+    animation: zombie-position 5s linear,
+                zombie-animation 1s steps(9) infinite;
+    bottom: 100px;
+}
+
+.title {
+    margin-bottom: 2rem;
+}
+
+.title, .ranking-title {
+    cursor: default;
+}
+
+h2:hover, .go-to-menu:hover {
+    color: brown;
+    cursor: pointer;
+}
+
+.go-to-menu {
+    font-size: 25px;
+    font-weight: 900;
+}
+
+.menu, .ranking {
+    position: absolute;
+    top: 50%; 
+    left: 50%; 
+    transform: translate(-50%,-50%);
+    width: 350px;
+    height: 300px;
+    background-color: rgb(197, 197, 197);
+    box-shadow: 0 2px 29px gray;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.d-none {
+    display: none;
+}
+
+.d-block {
+    display: block;
+}
+
+input[type=text] {
+    width: 200px;
+    height: 30px;
+    font-size: 30px;
+    outline: none;
+    color: brown;
+    position: initial;
+    background: none;
+    border: none;
+    text-align: center;
+}
+
+input[type=text]::placeholder {
+    color: brown;
+    text-align: center;
+}
+
+.warning, .user-name {
+    margin-top: 5rem;
+    font-size: 30px;
+    font-weight: 700;
+    text-align: center;
+    color: white;
+    cursor: default;
+}
+
+.user-name {
+    font-size: 50px;
+}
+
+.score, .lives {
+    position: absolute;
+    top: 1rem;
+    color: white;
+    cursor: default;
+}
+
+.lives {
+    left:  1rem;
+    font-size: 40px;
+}
+
+.score {
+    font-size: 100px;
+    right: 1em;
+}
+
+.warning, .live-warning {
+    font-weight: 900;
+    animation: color-warning 1s linear infinite;
+}
+
+.cursor-crosshair {
+    cursor: url('../images/crosshair.png') 61 50, default;
+}
+
+.user-scores {
+    font-size: 15px;
+    font-weight: 700;
+
+}
+
+
+@keyframes zombie-position {
+    from { 
+        left: 100%
+    }
+    to {
+        left: -100%;
+    }
+}
+
+@keyframes zombie-animation {
+    from {
+        background-position: 1800px;
+    }
+    to {
+        background-position: 0px;
+    }
+}
+
+@keyframes color-warning {
+    0% {
+        color: white;
+    }
+    50% {
+        color: brown;
+    }
+    100% {
+        color: white
+    }
+}
