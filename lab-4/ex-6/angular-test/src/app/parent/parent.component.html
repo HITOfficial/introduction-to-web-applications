@@ -1,0 +1,8 @@
+<div class="container">
+    <p>actual value: {{value}}</p>
+    <app-child
+        (incrementEmit)="incrementValue($event)"
+        (resetEmit)="resetEvent($event)"
+        >
+    </app-child>
+</div>
