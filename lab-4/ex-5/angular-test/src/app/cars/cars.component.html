@@ -1,0 +1,26 @@
+<div class="container">
+	<select id="brand" (change)="selectedBrand()">
+			<label>Chose car brand</label>
+			<optgroup label="car brand">
+				<option value=""></option>
+				<option value="bmw">BMW</option>
+				<option value="audi">Audi</option>
+				<option value="mercedes">Mercedes</option>
+				<option value="fiat">Fiat</option>
+				<option value="porsche">Porsche</option>
+			</optgroup>
+	</select>
+	<select *ngIf="brandSelected" id="model" (change)="selectedModel()">
+        <optgroup label="{{brand}} models">
+            <option *ngFor="let brandModel of models[brand]">{{brandModel}}</option>
+        </optgroup>
+	</select>
+	
+	<select *ngIf="modelSelected" id="color" (change)="selectedColor()">
+        <optgroup label="{{model}} colors">
+            <option *ngFor="let avaiableColor of colors[model]" class="{{avaiableColor}}">{{avaiableColor}}</option>
+        </optgroup>
+	</select>
+    <p class="selected-car">{{allOptionsSelected()}}</p>
+</div>	
+

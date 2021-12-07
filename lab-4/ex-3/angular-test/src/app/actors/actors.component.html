@@ -1,0 +1,16 @@
+<label>
+    <input type="text" #actors  id="actor">
+    <button (click)="addNewActor(actors.value)">Add new actor</button>
+</label>
+<label>
+    <input type="text" #video  id="actor">
+    <button (click)="addNewVideo(video.value)">Add new video</button>
+</label>
+
+<div *ngFor="let actor of actorsArray">
+    actor: {{actor}}
+</div>
+
+<div *ngFor="let video of videosArray">
+    video: {{video}}
+</div>
